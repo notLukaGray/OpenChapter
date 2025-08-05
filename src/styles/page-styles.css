@@ -1,0 +1,45 @@
+/* Common Page Styles */
+
+.page-container {
+  padding-top: 40px;
+}
+
+.page-background {
+  background-color: var(--color-bg);
+}
+
+.page-spacer-100 {
+  height: 100px;
+}
+
+.page-spacer-20 {
+  height: 20px;
+}
+
+.page-spacer-30 {
+  height: 30px;
+}
+
+.page-spacer-200 {
+  height: 200px;
+}
+
+.page-content-bottom {
+  padding-bottom: 200px;
+}
+
+.page-quote-text {
+  font-size: 1rem;
+}
+
+.page-image-position {
+  object-position: center 30%;
+}
+
+.page-audio-container {
+  margin-top: 4rem;
+  margin-bottom: 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

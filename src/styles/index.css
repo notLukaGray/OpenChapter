@@ -1,0 +1,103 @@
+@import 'tailwindcss/preflight';
+@tailwind utilities;
+
+:root {
+  --font-serif: 'Lora', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', Courier, monospace;
+  --font-sans: 'Inter', 'Montserrat', Arial, sans-serif;
+  --color-bg: #dfdfdf;
+  --color-white: #fff;
+  --color-accent: #b95b23;
+  --color-text: #222;
+  --color-text-light: #333;
+  --color-gray-light: #f3f4f6;
+  --color-gray-medium: #888;
+  --color-gray-dark: #666;
+  --color-gray-darker: #555;
+  --color-gray-lightest: #aaa;
+  --color-gray-border: #ddd;
+  --color-gray-border-light: #eee;
+  --color-gray-border-lighter: #f0f0f0;
+  --color-success: #059669;
+  --color-accent-hover: #a04a1a;
+  --color-accent-light: #b95b23;
+  --color-code-bg: #f7f7f7;
+  --color-selection: #fff29e;
+}
+
+html {
+  font-size: 16px;
+  font-feature-settings:
+    'kern' 1,
+    'onum' 1;
+  font-kerning: normal;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  line-height: 1.7;
+  margin: 0 0 5rem 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-selection);
+}
+
+::-moz-selection {
+  background: var(--color-selection);
+}
+
+a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-position: 0px 100%;
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+em {
+  font-style: italic;
+}
+
+.hero-title {
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+  body {
+    margin: 0 0 3rem 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}

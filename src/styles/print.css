@@ -1,0 +1,318 @@
+/* Print Styles for Book Chapters */
+
+@media print {
+  /* Reset page layout */
+  html,
+  body {
+    overflow: visible !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+    line-height: 1.7 !important;
+    font-family: var(--font-serif) !important;
+  }
+
+  /* Page setup */
+  @page {
+    margin: 0.75in;
+    size: A4;
+  }
+
+  /* Hide non-essential components */
+  /* Navigation and UI components */
+  [class*='ShareButton'],
+  [class*='ImageAttribution'],
+  [class*='AudioPlayerWrapper'],
+  [class*='NavigationButtons'],
+  [class*='ScrollTracker'],
+  [class*='PerformanceTracker'],
+  [class*='AudioPlayer'],
+  [class*='NavMenu'],
+  [class*='SearchButton'],
+  [class*='SearchModal'],
+  
+  /* Navigation button classes */
+  .nav-button,
+  .nav-button-left,
+  .nav-button-right,
+  .nav-button-icon,
+  
+  /* Share button classes */
+  .share-button,
+  .share-button-icon,
+  .share-toast,
+  
+  /* Audio player classes */
+  .audio-player-container,
+  .audio-player-circle,
+  .audio-player-button,
+  .audio-player-time,
+  .audio-player-slider,
+  .audio-player-speed-button,
+  
+  /* Audio player inline styles (fallback for components using inline styles) */
+  [style*='background: #b95b23'],
+  [style*='borderRadius: 9999'],
+  [style*='width: 64'],
+  [style*='height: 64'],
+  [style*='minWidth: 64'],
+  [style*='minHeight: 64'],
+  [style*='width: 48'],
+  [style*='height: 48'],
+  [style*='minWidth: 48'],
+  [style*='minHeight: 48'],
+  [style*='color: white'],
+  [style*='zIndex: 2'],
+  [style*='z-index: 2'],
+  
+  /* Nav menu classes */
+  .nav-menu-container,
+  .nav-menu-bar,
+  .nav-menu-search-section,
+  .nav-menu-search-container,
+  .nav-menu-search-input,
+  .nav-menu-title-link,
+  .nav-menu-title-text,
+  .nav-menu-hamburger,
+  .nav-menu-items-container,
+  .nav-menu-part-item,
+  .nav-menu-chapter-link,
+  .nav-menu-bottom-spacer,
+  .nav-menu-search-overlay,
+  .nav-menu-search-backdrop,
+  .nav-menu-search-modal,
+  .nav-menu-search-header,
+  .nav-menu-search-title,
+  .nav-menu-search-close,
+  .nav-menu-search-loading,
+  .nav-menu-search-no-results,
+  .nav-menu-search-result,
+  .nav-menu-search-result-title,
+  .nav-menu-search-result-meta,
+  .nav-menu-search-result-excerpt,
+  .nav-menu-search-footer,
+  .nav-menu-search-view-all {
+    display: none !important;
+  }
+
+  /* Layout adjustments */
+  [class*='min-h-screen'] {
+    min-height: auto !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  [class*='flex'][class*='flex-col'] {
+    display: block !important;
+    height: auto !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+  }
+
+  /* Hide image section */
+  [class*='rounded-none'][class*='shadow'][class*='basis'] {
+    display: none !important;
+  }
+
+  /* Style content section */
+  div[class*='flex-1'][class*='bg-white'][class*='rounded-none'] {
+    flex: none !important;
+    background: white !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0.75in !important;
+    overflow: visible !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    position: static !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  /* Hide spacer div */
+  div[style*='height: 100px'] {
+    display: none !important;
+  }
+
+  /* Typography */
+  .prose {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    color: black !important;
+  }
+
+  .prose h1 {
+    font-family: var(--font-sans) !important;
+    font-weight: 900 !important;
+    font-size: 18pt !important;
+    color: black !important;
+    margin-top: 18pt !important;
+    margin-bottom: 9pt !important;
+    page-break-after: avoid !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1 !important;
+  }
+
+  .prose h2 {
+    font-family: var(--font-sans) !important;
+    font-weight: 700 !important;
+    font-size: 14pt !important;
+    color: black !important;
+    margin-top: 14pt !important;
+    margin-bottom: 7pt !important;
+    page-break-after: avoid !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .prose h3 {
+    font-family: var(--font-sans) !important;
+    font-weight: 700 !important;
+    font-size: 12pt !important;
+    color: var(--color-accent) !important;
+    margin-top: 10pt !important;
+    margin-bottom: 5pt !important;
+    page-break-after: avoid !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    line-height: 1.4 !important;
+  }
+
+  .prose p {
+    margin-bottom: 9pt !important;
+    line-height: 1.7 !important;
+    text-align: left !important;
+    orphans: 3 !important;
+    widows: 3 !important;
+    font-family: var(--font-serif) !important;
+  }
+
+  .prose strong {
+    font-weight: 700 !important;
+    color: black !important;
+  }
+
+  .prose em {
+    font-style: italic !important;
+    color: black !important;
+  }
+
+  .prose code {
+    font-family: 'Courier New', monospace !important;
+    background: #f5f5f5 !important;
+    padding: 2pt 4pt !important;
+    border: 1pt solid #ddd !important;
+    font-size: 10pt !important;
+  }
+
+  .prose pre {
+    font-family: 'Courier New', monospace !important;
+    background: #f5f5f5 !important;
+    padding: 12pt !important;
+    border: 1pt solid #ddd !important;
+    overflow: visible !important;
+    white-space: pre-wrap !important;
+    font-size: 10pt !important;
+    margin-bottom: 12pt !important;
+  }
+
+  .prose ul {
+    list-style: disc !important;
+    margin-left: 24pt !important;
+    margin-bottom: 12pt !important;
+  }
+
+  .prose li {
+    margin-bottom: 6pt !important;
+  }
+
+  .prose a {
+    color: black !important;
+    text-decoration: underline !important;
+    background-image: none !important;
+  }
+
+  /* Chapter title */
+  .prose::before {
+    content: attr(data-chapter-title);
+    display: block;
+    font-family: var(--font-sans) !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    text-align: center !important;
+    margin-bottom: 24pt !important;
+    margin-top: 6pt !important;
+    color: black !important;
+    page-break-after: avoid !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1 !important;
+  }
+
+  /* Page breaks */
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid !important;
+  }
+
+  p {
+    page-break-inside: avoid !important;
+  }
+
+  /* Links */
+  a[href]:after {
+    content: ' (' attr(href) ')' !important;
+    font-size: 10pt !important;
+    color: #666 !important;
+  }
+
+  /* Hide copy buttons */
+  button[aria-label*='Copy link'] {
+    display: none !important;
+  }
+
+  /* Remove hover effects */
+  *:hover {
+    background: none !important;
+    color: inherit !important;
+  }
+
+  /* Force background colors to print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Ensure text is visible */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  span,
+  div {
+    color: black !important;
+    visibility: visible !important;
+  }
+
+  /* Ensure prose content is visible */
+  div[class*='prose'] {
+    display: block !important;
+    visibility: visible !important;
+    color: black !important;
+    background: white !important;
+  }
+}
