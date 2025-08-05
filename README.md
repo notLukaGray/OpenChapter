@@ -1,6 +1,13 @@
 # OpenChapter
 
-**⚠️ Work in Progress - Not Production Ready**
+## Live Demo
+
+See OpenChapter in action: **[https://www.looksgoodnowwhat.com/](https://www.looksgoodnowwhat.com/)**
+
+This live example demonstrates all the core features including audio narration, search functionality, responsive design, and more.
+
+
+**Work in Progress - Not Production Ready**
 
 An open-source platform for creating interactive web books with audio narration capabilities. Perfect for educators, authors, and content creators.
 
@@ -156,7 +163,7 @@ Update `scripts/generate-chapter-audio.js` for custom audio settings.
 
 ## Contributing
 
-**⚠️ Important:** This project is in active development with known bugs. Before contributing:
+**Important:** This project is in active development with known bugs. Before contributing:
 
 1. Check existing issues for known problems
 2. Test thoroughly in your environment
@@ -205,6 +212,6 @@ The MIT License allows you to:
 
 ---
 
-Built with ❤️ for the open source community.
+Built with love for the open source community.
 
 **Status**: Work in Progress - Not Production Ready
