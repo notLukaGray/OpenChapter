@@ -44,6 +44,8 @@ An open-source platform for creating interactive web books with audio narration 
 
 ## Quick Start
 
+### Option 1: Use as a Complete Application (Recommended)
+
 1. **Clone the repository**
    ```bash
    git clone https://github.com/notLukaGray/OpenChapter.git
@@ -69,6 +71,20 @@ An open-source platform for creating interactive web books with audio narration 
 5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
+### Option 2: Use as a Package
+
+Install the core package in your existing project:
+
+```bash
+npm install @openchapter/core
+```
+
+```tsx
+import { AudioPlayer, processMarkdown } from '@openchapter/core';
+
+// Use the components and utilities in your project
+```
+
 ## Live Demo
 
 See OpenChapter in action: **[https://www.looksgoodnowwhat.com/](https://www.looksgoodnowwhat.com/)**
@@ -90,6 +106,8 @@ Copy `env.example` to `.env.local` and configure:
 
 ## Content Structure
 
+### For Complete Application
+
 Add your chapters as markdown files in `src/content/`:
 
 ```markdown
@@ -110,6 +128,17 @@ AudioText: Audio description for this chapter
 # Your Chapter Content
 
 Your markdown content here...
+```
+
+### For Package Usage
+
+Use the provided utilities to process your content:
+
+```tsx
+import { processMarkdown, extractMetadata } from '@openchapter/core';
+
+const content = await processMarkdown(markdownContent);
+const metadata = extractMetadata(markdownContent);
 ```
 
 ## Deployment

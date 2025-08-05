@@ -1,0 +1,61 @@
+{
+  "name": "@openchapter/core",
+  "version": "0.1.0",
+  "description": "Core components and utilities for creating interactive web books with audio narration",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "web-book",
+    "audio-narration",
+    "interactive",
+    "nextjs",
+    "react",
+    "typescript",
+    "markdown",
+    "text-to-speech"
+  ],
+  "author": "Luka Gray <notlukagray@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notLukaGray/OpenChapter.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/notLukaGray/OpenChapter/issues"
+  },
+  "homepage": "https://github.com/notLukaGray/OpenChapter#readme",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "next": "^14.0.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "flexsearch": "^0.8.205",
+    "rehype-katex": "^7.0.1",
+    "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-footnotes": "^4.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5"
+  }
+} 
