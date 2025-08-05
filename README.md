@@ -62,6 +62,12 @@ An open-source platform for creating interactive web books with audio narration 
 5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
+## Live Demo
+
+See OpenChapter in action: **[https://www.looksgoodnowwhat.com/](https://www.looksgoodnowwhat.com/)**
+
+This live example demonstrates all the core features including audio narration, search functionality, responsive design, and more.
+
 ## Environment Variables
 
 Copy `env.example` to `.env.local` and configure:
